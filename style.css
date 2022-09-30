@@ -9,6 +9,12 @@
     -webkit-font-smoothing: antialiased;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--pure);
@@ -250,6 +256,30 @@ section.rocket {
     position: absolute;
     left: 0;
     right: 0;
+}
+.sub-links{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.151);
+    box-shadow: 4px 4px 100px rgb(20, 20, 20);
+    backdrop-filter: blur(2px);
+    color: white;
+    border-radius: 9px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    height: 90vh;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 5vh;
+    margin: 5vh;
+}
+.sub-links a{
+    height: fit-content;
+    margin: auto 70px;
+}
+.rocket a:hover .rocket-img img{
+    transform: scale(1.2);
 }
 
 @keyframes jump {
