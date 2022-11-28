@@ -413,6 +413,7 @@ footer .footer-socials a:hover {
 }
 .outside,.menu{
     display: none;
+    transition: 0.5s;
 }
 @media screen and (max-width: 860px) {
     .menu{
