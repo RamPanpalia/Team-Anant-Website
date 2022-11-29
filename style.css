@@ -68,6 +68,34 @@ header nav .nav-right a.active:after {
     width: 70%;
 }
 
+.rocket-body{
+    transform: rotateY(180deg) scale(0.75) translate(-100px,-150px);
+    /* border: 2px solid white; */
+    /* z-index: 1; */
+}
+.fire{
+    transform: rotate(215deg) scale(0.75) translate(-100px, -100px);
+    /* border: 2px solid white; */  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform:  rotate(215deg) scale(0.75) translate(-99px, -99px); }
+    10% { transform:  rotate(214deg) scale(0.75) translate(-101px, -102px); }
+    20% { transform:  rotate(216deg) scale(0.75) translate(-103px, -100px); }
+    30% { transform:  rotate(215deg) scale(0.75) translate(-97px, -98px); }
+    40% { transform:  rotate(216deg) scale(0.75) translate(-101px, -101px); }
+    50% { transform:  rotate(214deg) scale(0.75) translate(-101px, -102px); }
+    60% { transform:  rotate(215deg) scale(0.75) translate(-103px, -99px); }
+    70% { transform:  rotate(214deg) scale(0.75) translate(-97px, -99px); }
+    80% { transform:  rotate(216deg) scale(0.75) translate(-101px, -101px); }
+    90% { transform:  rotate(215deg) scale(0.75) translate(-99px, -98px); }
+    100% { transform:  rotate(214deg) scale(0.75) translate(-99px, -102px); }
+  }
+
 .social div {
     border: 2px solid var(--pure);
     width: 40px;
@@ -143,10 +171,20 @@ header nav .nav-right a.active:after {
     padding: 0 60px 0 30px;
 }
 
-.hero .cta .right-section img {
+.hero .cta .right-section{
+    position: relative;
     height: 50vh;
     padding-left: 150px;
 }
+.hero .cta .right-section img{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+}
+/* .hero .cta .right-section img{
+    height: 50vh;
+    padding-left: 150px;
+} */
 
 .info {
     padding-left: 100px;
@@ -227,7 +265,7 @@ section.rocket {
 }
 
 .rocket-img {
-    position: absolute;
+    /* position: absolute; */
     height: 100%;
     width: 100%;
 }
@@ -458,3 +496,14 @@ footer .footer-socials a:hover {
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 760px){
+
+.hero .cta .left-section{
+    padding: 10px 10px 0 5px;
+}
+.box1,.box2{
+    font-size: 18px;
+}
+
+} 
