@@ -384,6 +384,8 @@ footer .footer-socials a:hover {
 
 .carousel{
     margin: 40px 15vw;
+    padding: 10px;
+    border: 2px solid gold;
     /* box-shadow:inset 10px 10px 100px -10px gray; */
 }
 @media screen and (max-width: 1100px) {
